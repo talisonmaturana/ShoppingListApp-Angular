@@ -1,0 +1,11 @@
+<form (submit)="addItem()">
+    <div class="input-group my-3">
+      <input id="inputItem" type="text" name="name" class="form-control" placeholder="Item name" [(ngModel)]="itemName">
+      <button id="btnAdd" class="btn btn-primary" type="submit">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </form>
+  <ul class="list-group">
+    <app-shopping-list-item *ngFor="let item of shoppingListService.listItems" [shoppingItem]="item"></app-shopping-list-item>
+  </ul>

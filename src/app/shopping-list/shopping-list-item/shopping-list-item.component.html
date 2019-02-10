@@ -1,0 +1,14 @@
+<li class="list-group-item d-flex justify-content-between" [ngClass]="{'disabled': shoppingItem.checked}">
+    <span class="d-flex align-items-center">
+      <span class="badge badge-pill badge-primary mr-2">{{ shoppingItem.amount }}</span>
+      <span>{{ shoppingItem.name }}</span>
+    </span>
+    <span>
+      <button id="btnRemove" class="btn btn-sm btn-danger mr-1" (click)="removeItem()">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+      <button id="btnCheck" class="btn btn-sm btn-success" (click)="checkItem()" *ngIf="!shoppingItem.checked">
+        <i class="fas fa-check"></i>
+      </button>
+    </span>
+  </li>
